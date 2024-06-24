@@ -1,50 +1,22 @@
+function exibirTabuada() {
+    var numero = document.getElementById('numero').value;
 
+    
+    if (numero === '' || isNaN(numero)) {
+      alert('Por favor, digite um número válido.');
+      return;
+    }
 
-function TropaDoEnguica_j() {
-    alert("Vitor Riquelme Barros Silva");
-}
+    numero = parseInt(numero);
 
-function TropaDoEnguica_i() {
-    alert("Szaffron");
-}
+    var tabuadaHtml = '<h3>Tabuada do ' + numero + '</h3><table>';
 
-function TropaDoEnguica_h() {
-    alert("Arthur Coimbra");
-}
+    for (var i = 1; i <= 10; i++) {
+      var resultado = numero * i;
+      tabuadaHtml += '<tr><td>' + numero + ' x ' + i + '</td><td> = </td><td>' + resultado + '</td></tr>';
+    }
 
+    tabuadaHtml += '</table>';
 
-
-function TropaDoEnguica_g() {
-    alert("Vitor Riquelme Barros Silva");
-}
-
-function TropaDoEnguica_f() {
-    alert("Szaffron");
-}
-
-function TropaDoEnguica_e() {
-    alert("Arthur Coimbra");
-}
-
-
-
-
-function TropaDoEnguica_d() {
-    alert("Vitor Riquelme Barros Silva");
-}
-
-function TropaDoEnguica_c() {
-    alert("Szaffron");
-}
-
-function TropaDoEnguica_b() {
-    alert("Arthur Coimbra");
-}
-
-
-
-function TropaDoEnguica_a() {
-    alert("Vitor Riquelme Barros Silva");
-}
-
-
+    document.getElementById('tabuada').innerHTML = tabuadaHtml;
+  }
